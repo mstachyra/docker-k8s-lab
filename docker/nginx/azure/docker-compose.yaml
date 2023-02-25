@@ -1,0 +1,16 @@
+# name: my-nginx-project - cannot use like this, use -p to chane name of stack
+services:
+  myservice:
+    image: registry.hub.docker.com/library/nginx
+    volumes:
+      - nginx-mydata:/usr/share/nginx/html
+    ports:
+      - 80:80
+    domainname: "my-nginx-project"
+
+volumes:
+  nginx-mydata:
+    driver: azure_file
+    driver_opts:
+      share_name: test-nginx
+      storage_account_name: testmstachyra

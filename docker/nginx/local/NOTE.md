@@ -1,0 +1,1 @@
+Lokalizacja volume `\\wsl.localhost\docker-desktop-data\data\docker\volumes\local_nginx-mydata\_data`

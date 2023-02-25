@@ -1,0 +1,17 @@
+version: "3.8"
+name: my-nginx-project
+services:
+  mynginx:
+    image: nginx
+    volumes:
+      - nginx-mydata:/usr/share/nginx/html
+    ports:
+      - 8090:80
+    networks:
+      - nginx-net
+
+volumes:
+  nginx-mydata:
+
+networks:
+  nginx-net:

@@ -1,0 +1,18 @@
+version: "3.8"
+name: my-eclipse-mosquitto-project
+services:
+  mymosquitto:
+    image: eclipse-mosquitto
+    volumes:
+      - eclipse-mosquitto-mydata:/mosquitto
+    ports:
+      - 8001:9001
+      - 8083:1883
+    networks:
+      - eclipse-mosquitto-net
+
+volumes:
+  eclipse-mosquitto-mydata:
+
+networks:
+  eclipse-mosquitto-net:
